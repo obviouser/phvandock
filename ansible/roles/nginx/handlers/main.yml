@@ -1,0 +1,8 @@
+---
+#- name: restart nginx
+#  service: name=nginx enabled=yes state=restarted
+- name: restart nginx
+  shell: /etc/init.d/nginx restart
+- name: start nginx
+  service: name=nginx enabled=yes state=started
+

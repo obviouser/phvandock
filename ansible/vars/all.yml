@@ -1,0 +1,29 @@
+---
+server:
+    install: '1'
+    packages: [vim, git, htop, iotop]
+    timezone: Europe/Chisinau
+    locale: en_US.UTF-8
+vagrant_local:
+    install: '1'
+    vm: { base_box: trusty64, hostname: test, ip: 127.0.0.1, memory: '512', sharedfolder: ./, useVagrantCloud: '1', syncType: rsync }
+nginx:
+    install: '1'
+    docroot: /home/vagrant
+    servername: test.local
+mysql:
+    install: '1'
+    root_password: '123'
+    database: db
+    user: user
+    password: '123'
+    dump: ''
+php:
+    install: '1'
+    ppa: php5-5.6
+    packages: [php5-cli, php5-intl, php5-mcrypt, php-pear, php5-curl, php5-imagick, php5-common, php5-fpm, php5-gd, php5-geoip, php5-memcache, php5-memcached, php5-mysql, php5-sqlite, php5-xdebug, php5-xsl]
+xdebug:
+    install: '1'
+composer:
+    install: '1'
+
