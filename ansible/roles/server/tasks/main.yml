@@ -10,7 +10,9 @@
     - curl
     - wget
     - python-software-properties
-
+    - nano
+    - mc
+    - memcached
 - name: Install Extra Packages
   sudo: yes
   apt: pkg={{ item }} state=latest
